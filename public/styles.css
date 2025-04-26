@@ -40,9 +40,12 @@ footer p {
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
+  width: 180px;
   margin: 16px;
   float: left;
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 .note h1 {
   font-size: 1.1em;
@@ -53,4 +56,40 @@ footer p {
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.add-button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
+}
+
+.note button.delete {
+  background-color: #f5ba13;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.note button.delete:hover {
+  background-color: #ffa500;
 }
